@@ -22,6 +22,9 @@
 - Cohere Rerank (ranking)  
 - Cohere Command R+ (generation)  
 
+### Integrations / Context Layer
+- MCP (Model Context Protocol) for Slack, GitHub, Jira connectors  
+
 ---
 
 ## ⚖️ Design constraints
@@ -29,24 +32,13 @@
 - response latency: < 3 seconds  
 - max retrieved context: 10–15 chunks  
 - incremental ingestion (no full re-sync)  
-- API rate limit handling (Slack/GitHub/Jira)  
-- caching for frequent queries  
+- API rate limit handling (Slack/GitHub/Jira via MCP tools)  
+- caching for frequent queries and embeddings  
 
 ---
+
+## 🧠 What ContextOS is
+
 ContextOS is a **focused incident intelligence system**.
 
----
-
-## 🚀 Final positioning
-
-ContextOS is an engineering incident copilot that transforms fragmented Slack, GitHub, and Jira data into structured timelines, root cause analysis, and evidence-backed explanations to accelerate production debugging.
-
----
-
-## 📈 Future extensions
-
-- real-time incident detection  
-- automatic alerting from Slack signals  
-- service ownership inference  
-- deployment risk scoring  
-- incident similarity search  
+It connects engineering tools through MCP-powered integrations and builds a unified retrieval layer that reconstructs what happened across Slack, GitHub, and Jira when incidents or blockers occur.

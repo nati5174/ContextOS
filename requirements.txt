@@ -1,0 +1,7 @@
+cohere
+slack-sdk
+PyGitHub
+atlassian-python-api
+pydantic
+python-dotenv
+httpx
